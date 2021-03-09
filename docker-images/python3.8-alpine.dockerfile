@@ -1,4 +1,4 @@
-FROM python:3.8-alpine3.11
+FROM python:3.8-alpine3.12
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
@@ -49,7 +49,7 @@ ENV NGINX_WORKER_PROCESSES 1
 # (in a Dockerfile or with an option for `docker run`)
 ENV LISTEN_PORT 80
 
-# Used by the entrypoint to explicitly add installed Python packages 
+# Used by the entrypoint to explicitly add installed Python packages
 # and uWSGI Python packages to PYTHONPATH otherwise uWSGI can't import Flask
 ENV ALPINEPYTHON python3.8
 
